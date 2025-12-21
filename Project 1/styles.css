@@ -1,0 +1,212 @@
+/* Reset / base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #111827;
+  background-color: #f9fafb;
+}
+
+/* Top navigation */
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(249, 250, 251, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.logo span {
+  color: #2563eb;
+}
+
+.top-nav nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.top-nav nav a:hover {
+  color: #111827;
+}
+
+/* Layout */
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Home / hero section */
+
+.home-section {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.home-section h1 {
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+.home-section p {
+  max-width: 640px;
+  color: #4b5563;
+  margin-bottom: 1.25rem;
+}
+
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid #2563eb;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Sections */
+
+.about-section,
+.projects-section,
+.contact-section {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.about-section h2,
+.projects-section h2,
+.contact-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-section p {
+  color: #4b5563;
+  margin-bottom: 0.75rem;
+}
+
+/* Projects list */
+
+.projects-section ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.projects-section li {
+  margin-bottom: 0.4rem;
+  color: #4b5563;
+}
+
+/* Contact section */
+
+.contact-section p {
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.75rem;
+}
+
+.contact-section li {
+  margin-bottom: 0.3rem;
+}
+
+.contact-section a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem 2rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 640px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .top-nav nav a {
+    margin-left: 0.5rem;
+  }
+
+  .home-section h1 {
+    font-size: 2rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .home-buttons .btn {
+    text-align: center;
+    width: 100%;
+  }
+}
